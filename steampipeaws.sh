@@ -110,11 +110,14 @@ if ! command -v $bin_dir/steampipe >/dev/null; then
 	echo "Steampipe was installed, but could not be executed. Are you sure '$bin_dir/steampipe' has the necessary permissions?"
 	exit 1
 fi
+
 echo "Installing your first plugin, AWS"
 steampipe plugin install aws
+
 echo "Installing the AWS Compliance Mod"
 git clone https://github.com/turbot/steampipe-mod-aws-compliance
 cd steampipe-mod-aws-compliance
+
 echo "Steampipe CLI, AWS Plugin & AWS Compliance Mod are installed"
 echo "More info on AWS Compliance Mod: https://hub.steampipe.io/mods/turbot/aws_compliance"
 echo "Copy one of the commands to run your 1st benchmark:"
