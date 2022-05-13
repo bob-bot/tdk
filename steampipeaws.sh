@@ -1,7 +1,7 @@
 #!/bin/sh
 
 echo "Downloading Steampipe CLI"
-curl -fsSL https://raw.githubusercontent.com/turbot/steampipe/main/install.sh
+sudo /bin/sh -c "$(curl -fsSL https://raw.githubusercontent.com/turbot/steampipe/main/install.sh)"
 echo "Installing your first plugin, AWS"
 steampipe plugin install aws
 echo "Installing the AWS Compliance Mod"
